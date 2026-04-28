@@ -1,93 +1,112 @@
-Agri Price Prediction System
-Project Overview
+# AI-Based Agri Price Prediction System
 
-Agri Price Prediction System is a machine learning-based web application developed using Python and Streamlit to predict agricultural commodity prices based on historical data.
+## Overview
+This project is a Streamlit-based web application that predicts agricultural commodity prices using Machine Learning techniques.
 
-The system analyzes factors such as past prices, trends, and seasonal patterns to predict future prices using a trained Random Forest model. It also provides interactive visualizations for better understanding of market behavior.
+The system analyzes historical data such as date, crop details, and previous prices to forecast future market trends and help farmers and traders make better decisions.
 
-Objectives
-Predict agricultural commodity prices accurately
-Analyze trends and seasonal patterns
-Detect price volatility
-Provide data-driven insights for decision making
-Features
-Crop price prediction
-Future forecasting (next 7 days)
-Trend and volatility analysis
-Feature importance visualization
-Scenario simulation
-Interactive Streamlit interface
-Machine learning-based prediction
-Technologies Used
-Python
-Streamlit
-Scikit-learn
-Pandas
-NumPy
-Project Structure
-agri-price-predictor/
+---
+
+## Features
+- Upload CSV dataset
+- Automatic data preprocessing and encoding
+- Feature engineering (lag, rolling stats, time features)
+- Random Forest model training
+- Actual vs Predicted visualization
+- Feature importance analysis
+- Future price forecasting (next 7 days)
+- Market insights (trend and volatility)
+- Custom user input prediction
+- Scenario simulation (multiple predictions)
+
+---
+
+## Technologies Used
+- Python
+- Streamlit
+- Pandas
+- NumPy
+- Scikit-learn
+
+---
+
+## Project Structure
+mini-pro/
 │
 ├── app/
 │   └── app.py
 │
 ├── dataset/
-│   └── agri_price_dataset.csv
-└── README.md
-Installation
+│   └── flight_delay_dataset_200.csv
+│
+├── model/
+│   ├── flight_delay_model.pkl
+│   └── lstm_model.h5
+│
+├── src/
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   └── predict.py
+│
+└── requirement.txt
 
-Clone repository:
+---
 
-git clone https://github.com/yourusername/agri-price-predictor.git
-cd agri-price-predictor
+## How to Run the Project
 
-Create virtual environment:
+### 1. Install dependencies
+pip install -r requirement.txt
 
-python -m venv venv
-
-Activate environment:
-
-Install dependencies:
-
-pip install -r requirements.txt
-Run Project
+### 2. Run the application
 streamlit run app/app.py
-Output
 
-Open browser:
-http://localhost:8501
+---
 
-Input Parameters Used
-Date
-Commodity (optional)
-Lag features (previous prices)
-Rolling mean (trend)
-Rolling standard deviation (volatility)
-Month
-Day of week
-Prediction Graphs
-Actual vs Predicted Prices
-Feature Importance Chart
-Trend Analysis
-Volatility Analysis
-Machine Learning Model
+## Input Dataset Requirements
+Your CSV file must contain:
+- Date column
+- Price column
+- Other categorical or numerical features
 
-Random Forest Regressor is used for prediction.
+---
 
-AI/ML Concepts Used
-Supervised Learning
-Regression
-Ensemble Learning (Random Forest)
-Feature Engineering
-Time Series Forecasting
-Model Evaluation (MAE, RMSE)
-Explainable AI (Feature Importance)
-Future Enhancements
-Integration with weather data 
-Deep learning models (LSTM)
-Real-time market data integration
-Cloud deployment
-Improved prediction accuracy
-Team Members
+## Model Details
+- Algorithm: Random Forest Regressor
+- Train/Test Split: 80/20
+- Evaluation Metrics:
+  - MAE (Mean Absolute Error)
+  - RMSE (Root Mean Squared Error)
+
+---
+
+## Forecasting
+The system predicts future prices using:
+- Lag features (previous 7 days)
+- Rolling mean and standard deviation
+- Time-based features
+
+---
+
+## Market Insights
+- Volatility detection
+- Trend analysis (Uptrend / Downtrend)
+
+---
+
+## Team Members
+Saravanakumar C
 Saktheeshwaran K
 Saravana S
-Saravanakumar C
+
+
+---
+
+## Future Improvements
+- Add LSTM deep learning model integration
+- Real-time API data integration
+- Advanced visualization dashboard
+
+---
+
+## Conclusion
+This project demonstrates how AI can be used in agriculture to predict prices and support decision-making using data-driven insights.
