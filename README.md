@@ -33,22 +33,13 @@ The system analyzes historical data such as date, crop details, and previous pri
 ## Project Structure
 mini-pro/
 │
-├── app/
-│   └── app.py
-│
-├── dataset/
-│   └── flight_delay_dataset_200.csv
-│
-├── model/
-│   ├── flight_delay_model.pkl
-│   └── lstm_model.h5
-│
-├── src/
-│   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   └── predict.py
-│
-└── requirement.txt
+├── app.py
+|
+├── dataset.csv
+|
+├── requirements.txt
+|
+└── README.md
 
 ---
 
