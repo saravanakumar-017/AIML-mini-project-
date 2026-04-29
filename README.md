@@ -34,11 +34,8 @@ The system analyzes historical data such as date, crop details, and previous pri
 mini-pro/
 │
 ├── app.py
-|
 ├── dataset.csv
-|
 ├── requirements.txt
-|
 └── README.md
 
 ---
