@@ -32,9 +32,10 @@ The system analyzes historical data such as date, crop details, and previous pri
 
 ## Project Structure
 mini-pro/
-│
 ├── app.py
-├── dataset.csv
+├── src/
+├── data/
+├── models/
 ├── requirements.txt
 └── README.md
 
